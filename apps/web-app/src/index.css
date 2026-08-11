@@ -3,10 +3,11 @@
 :root {
   --bg-main: #f8fafc;
   --bg-card: #ffffff;
-  --bg-glass-header: rgba(255, 255, 255, 0.88);
-  --border-subtle: rgba(0, 0, 0, 0.07);
-  --border-hover: rgba(99, 102, 241, 0.5);
-  --gradient-brand: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%);
+  --bg-glass-header: rgba(255, 255, 255, 0.92);
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(37, 99, 235, 0.4);
+  --color-primary-solid: #2563eb;
+  --color-primary-hover: #1d4ed8;
   --text-main: #0f172a;
   --text-muted: #475569;
   --text-dim: #94a3b8;
@@ -17,7 +18,7 @@
   --radius-md: 12px;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --shadow-card: 0 10px 30px rgba(15, 23, 42, 0.05);
-  --shadow-hover: 0 20px 40px rgba(99, 102, 241, 0.16);
+  --shadow-hover: 0 20px 40px rgba(37, 99, 235, 0.16);
 }
 
 /* Custom Scrollbar */
@@ -29,11 +30,11 @@
   background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(99, 102, 241, 0.3);
+  background: rgba(37, 99, 235, 0.3);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #4f46e5;
+  background: var(--color-primary-solid);
 }
 
 * {
@@ -70,7 +71,7 @@ body {
   left: 10%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.09) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.07) 0%, transparent 70%);
   filter: blur(80px);
   animation: floatBlob 18s ease-in-out infinite alternate;
 }
@@ -81,7 +82,7 @@ body {
   right: -5%;
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(236, 72, 153, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.06) 0%, transparent 70%);
   filter: blur(100px);
   animation: floatBlob 22s ease-in-out infinite alternate-reverse;
 }
@@ -92,7 +93,7 @@ body {
   left: 25%;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.06) 0%, transparent 70%);
   filter: blur(90px);
   animation: floatBlob 15s ease-in-out infinite alternate;
 }
@@ -148,15 +149,15 @@ body {
   width: 42px;
   height: 42px;
   border-radius: var(--radius-md);
-  background: var(--gradient-brand);
+  background: var(--color-primary-solid);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: 800;
-  color: #fff;
-  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.35);
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.3);
 }
 
 .brand-title-text h1 {
@@ -173,13 +174,13 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #4f46e5;
+  color: var(--color-primary-solid);
 }
 
-/* Editorial Segment Switcher */
+/* Editorial Segment Switcher - Solid Color Tabs */
 .segment-tabs {
   display: flex;
-  background: #f1f5f9;
+  background: #edf2f7;
   padding: 5px;
   border-radius: 30px;
   border: 1px solid var(--border-subtle);
@@ -195,7 +196,7 @@ body {
   font-weight: 600;
   border-radius: 24px;
   cursor: pointer;
-  transition: all 0.3s var(--ease-out);
+  transition: all 0.25s var(--ease-out);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -206,9 +207,9 @@ body {
 }
 
 .segment-btn.active {
-  background: var(--gradient-brand);
+  background: var(--color-primary-solid);
   color: #ffffff;
-  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.35);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
 }
 
 /* Command Search Bar */
@@ -236,9 +237,9 @@ body {
 }
 
 .search-input-box:focus {
-  border-color: #4f46e5;
+  border-color: var(--color-primary-solid);
   background: #ffffff;
-  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12), 0 12px 28px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12), 0 12px 28px rgba(15, 23, 42, 0.08);
 }
 
 .search-lens-icon {
@@ -253,7 +254,7 @@ body {
 }
 
 .search-input-box:focus ~ .search-lens-icon {
-  color: #4f46e5;
+  color: var(--color-primary-solid);
 }
 
 /* Section Meta Bar */
@@ -328,7 +329,7 @@ body {
   position: absolute;
   top: 14px;
   right: 14px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 5px 12px;
@@ -348,20 +349,20 @@ body {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: rgba(79, 70, 229, 0.9);
+  background: var(--color-primary-solid);
   backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
   font-size: 1.3rem;
-  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.4);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
   transition: transform 0.3s var(--ease-out), background 0.3s ease;
 }
 
 .editorial-card:hover .card-play-orb {
   transform: translate(-50%, -50%) scale(1.15);
-  background: var(--gradient-brand);
+  background: var(--color-primary-hover);
 }
 
 /* Card Caption Gradient Overlay */
@@ -402,7 +403,7 @@ body {
   gap: 6px;
 }
 
-/* Primary Action Buttons */
+/* Primary Action Buttons - Solid Color */
 .cta-button {
   display: inline-flex;
   align-items: center;
@@ -411,23 +412,24 @@ body {
   padding: 14px 32px;
   border-radius: 30px;
   border: none;
-  background: var(--gradient-brand);
+  background: var(--color-primary-solid);
   color: #ffffff;
   font-family: var(--font-body);
   font-size: 0.92rem;
   font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s var(--ease-out);
-  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.3);
+  transition: all 0.25s var(--ease-out);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
 }
 
 .cta-button:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(124, 58, 237, 0.45);
+  background: var(--color-primary-hover);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.42);
 }
 
 .cta-button.secondary {
-  background: #f1f5f9;
+  background: #edf2f7;
   color: #0f172a;
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: none;
@@ -439,14 +441,14 @@ body {
 }
 
 .cta-button.danger {
-  background: #f43f5e;
+  background: #dc2626;
   color: #ffffff;
-  box-shadow: 0 8px 20px rgba(244, 63, 94, 0.3);
+  box-shadow: 0 6px 18px rgba(220, 38, 38, 0.3);
 }
 
 .cta-button.danger:hover:not(:disabled) {
-  background: #e11d48;
-  box-shadow: 0 12px 28px rgba(244, 63, 94, 0.45);
+  background: #b91c1c;
+  box-shadow: 0 10px 24px rgba(220, 38, 38, 0.42);
 }
 
 /* Lightbox White Modal Overlay */
