@@ -3,7 +3,12 @@
   "compilerOptions": {
     "outDir": "./dist",
     "rootDir": "./src",
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@my-media/core": ["../media-core/dist/index", "../media-core/dist"],
+      "@my-media/native": ["../media-native/dist/index", "../media-native/dist"]
+    }
   },
   "include": ["src/**/*"]
 }

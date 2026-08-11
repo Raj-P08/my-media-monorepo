@@ -6,7 +6,7 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@my-media/core": ["../media-core/dist/index.d.ts"]
+      "@my-media/core": ["../media-core/dist/index", "../media-core/dist"]
     }
   },
   "include": ["src/**/*"]
