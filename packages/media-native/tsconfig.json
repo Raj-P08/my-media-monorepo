@@ -2,11 +2,10 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "outDir": "./dist",
-    "rootDir": "./src",
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@my-media/core": ["../media-core/dist/index", "../media-core/dist"]
+      "@my-media/core": ["../media-core/dist/index.d.ts", "../media-core/src/index.ts"]
     }
   },
   "include": ["src/**/*"]
