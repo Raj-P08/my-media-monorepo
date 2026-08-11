@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "jsx": "react-jsx",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@my-media/core": ["./packages/media-core/src/index.ts"],
+      "@my-media/react": ["./packages/media-react/src/index.ts"],
+      "@my-media/native": ["./packages/media-native/src/index.ts"],
+      "@my-media/ui-react": ["./packages/media-ui-react/src/index.ts"],
+      "@my-media/ui-native": ["./packages/media-ui-native/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "dist", "build"]
+}

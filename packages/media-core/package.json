@@ -1,0 +1,14 @@
+{
+  "name": "@my-media/core",
+  "version": "1.0.0",
+  "description": "Framework-agnostic core SDK for media search, fetching, event emitting, and caching.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "check-types": "tsc --noEmit"
+  },
+  "keywords": ["media", "sdk", "pexels", "headless"],
+  "license": "MIT"
+}

@@ -1,0 +1,18 @@
+{
+  "name": "@my-media/react",
+  "version": "1.0.0",
+  "description": "React wrapper for @my-media/core providing hooks and context providers.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@my-media/core": "*"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "license": "MIT"
+}
