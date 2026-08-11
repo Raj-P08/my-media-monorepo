@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "dev": "npm --workspace=web-app run dev",
-    "build": "npm run build --workspaces --if-present",
+    "build": "npm --workspace=@my-media/core run build && npm --workspace=@my-media/react run build && npm --workspace=@my-media/native run build && npm --workspace=@my-media/ui-react run build && npm --workspace=@my-media/ui-native run build && npm --workspace=web-app run build",
     "check-types": "tsc --build"
   },
   "devDependencies": {
